@@ -6,16 +6,15 @@ import {
   FiCloud,
   FiCode,
   FiCpu,
-  FiDatabase,
   FiDownload,
   FiGithub,
   FiGlobe,
   FiInbox,
   FiLayers,
   FiLinkedin,
-  FiMonitor,
   FiMail,
   FiMapPin,
+  FiMonitor,
   FiPhone,
   FiSend,
   FiServer,
@@ -24,6 +23,8 @@ import {
   SiBootstrap,
   SiExpress,
   SiFirebase,
+  SiGit,
+  SiGithub,
   SiGooglemaps,
   SiHtml5,
   SiJavascript,
@@ -31,7 +32,6 @@ import {
   SiMongodb,
   SiMongoose,
   SiNodedotjs,
-  SiNodemailer,
   SiOpenai,
   SiPaypal,
   SiPython,
@@ -40,8 +40,6 @@ import {
   SiRazorpay,
   SiStripe,
   SiTailwindcss,
-  SiGit,
-  SiGithub,
 } from "react-icons/si";
 
 const portfolio = {
@@ -57,7 +55,7 @@ const portfolio = {
     role: "Full-Stack Software Engineer · Backend Lead · MERN Stack",
     name: ["Rishabh", "Sharma"],
     subtitle:
-      "Backend-focused full-stack engineer with ~2 years of experience building production APIs, RBAC systems, payment flows, realtime infrastructure, and admin panels across live MERN products.",
+      "I build production-ready platforms across backend architecture, payments, realtime systems, admin panels, and polished full-stack product experiences.",
     badges: [
       "~2 years experience",
       "5+ completed projects",
@@ -68,7 +66,7 @@ const portfolio = {
       { value: "5+", label: "Projects owned as sole backend engineer" },
       { value: "100+", label: "Monthly payment transactions handled" },
       { value: "500+", label: "Scheduled email and SMS jobs per day" },
-      { value: "1,000+", label: "Push and email notifications delivered daily" },
+      { value: "1,000+", label: "Notifications delivered in production daily" },
     ],
   },
   contact: {
@@ -83,7 +81,7 @@ const portfolio = {
     paragraphs: [
       "I specialize in backend architecture, REST API design, admin panel development, and full-stack product delivery for production client applications on the MERN stack.",
       "At Aayan Infotech, I have worked as the sole backend engineer across 5+ completed projects while managing 4 simultaneous live products, independently building scalable APIs, realtime systems, payment integrations, queues, cloud workflows, and role-based access control.",
-      "I am especially drawn to high-growth product and startup environments where ownership matters, technical quality compounds, and shipping practical systems quickly is part of the culture.",
+      "My recent work spans Stripe, Razorpay, PayPal, eWay, AWS services, Redis, BullMQ, Firebase, Google Maps APIs, and AI-oriented experimentation. I am especially drawn to product teams where ownership, shipping speed, and engineering quality all matter together.",
     ],
     stats: [
       { value: "~2", label: "Years of focused full-stack experience" },
@@ -310,6 +308,10 @@ function App() {
 
     const cursor = document.getElementById("cursor");
     const ring = document.getElementById("cursorRing");
+    if (!cursor || !ring) {
+      return undefined;
+    }
+
     let mx = 0;
     let my = 0;
     let rx = 0;
@@ -397,7 +399,7 @@ function App() {
         </ul>
         <div className="nav-status">
           <div className="status-dot"></div>
-          Backend lead · open to work
+          Open to work
         </div>
       </nav>
 
@@ -457,7 +459,7 @@ function App() {
           <SectionHeader
             number="01"
             title="About"
-            intro="A resume-driven snapshot of where I create the most value: backend ownership, production integrations, and end-to-end product delivery."
+            intro="Backend-heavy product engineering with strong ownership across architecture, integrations, reliability, and end-to-end delivery."
           />
           <div className="about-grid">
             <div className="about-text reveal">
@@ -478,11 +480,11 @@ function App() {
 
         <section className="full-bleed" id="skills">
           <div className="section-shell">
-            <SectionHeader
-              number="02"
-              title="Skills"
-              intro="Core technologies, integrations, and engineering practices pulled directly from the latest resume."
-            />
+          <SectionHeader
+            number="02"
+            title="Skills"
+            intro="The stack I use most across shipping APIs, admin tools, payments, realtime systems, and full-stack product delivery."
+          />
             <div className="skills-grid enhanced">
               {portfolio.skillGroups.map((group, groupIndex) => (
                 <div className="skill-group reveal" key={group.title} style={{ animationDelay: `${groupIndex * 0.06}s` }}>
@@ -507,7 +509,7 @@ function App() {
           <SectionHeader
             number="03"
             title="Experience"
-            intro="The strongest theme across my recent work is ownership: designing systems, shipping them independently, and keeping them reliable under real usage."
+            intro="I work best in environments where ownership matters: designing systems, shipping them independently, and keeping them reliable under real usage."
           />
           <div className="exp-timeline">
             {portfolio.experience.map((item) => (
@@ -528,11 +530,11 @@ function App() {
 
         <section className="full-bleed" id="projects">
           <div className="section-shell">
-            <SectionHeader
-              number="04"
-              title="Projects"
-              intro="Representative product work across services, commerce, operations, mentoring, and AI experimentation."
-            />
+          <SectionHeader
+            number="04"
+            title="Projects"
+            intro="Selected product work across services, commerce, operations, mentoring, and AI experimentation."
+          />
             <div className="projects-grid expanded">
               {portfolio.projects.map((project, index) => (
                 <div className="project-card" key={project.title} style={{ animationDelay: `${index * 0.08}s` }}>
@@ -561,7 +563,7 @@ function App() {
           <SectionHeader
             number="05"
             title="Education & Certifications"
-            intro="Academic foundation plus ongoing upskilling around full-stack engineering and cloud development."
+            intro="Academic foundation, practical engineering depth, and continued learning around product and cloud development."
           />
           <div className="edu-grid reveal">
             {portfolio.education.map((item) => (
@@ -592,10 +594,10 @@ function App() {
           <div className="section-shell">
             <div className="contact-block reveal">
               <div className="contact-pre">Let's work together</div>
-              <h2 className="contact-heading">Building product systems, APIs, and operations-ready platforms.</h2>
+              <h2 className="contact-heading">Building thoughtful product systems with strong backend foundations.</h2>
               <p className="contact-sub">
                 I am looking for product teams and startups where strong backend thinking, practical execution,
-                and full-stack ownership can create real momentum.
+                and full-stack ownership can help turn ambitious ideas into stable products.
               </p>
               <div className="contact-links">
                 <a href={`mailto:${portfolio.contact.email}`} className="contact-link">
